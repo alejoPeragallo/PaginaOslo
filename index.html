@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSLO - Estufas de calidad</title>
+
+  <!-- Enlace al archivo de estilos -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fuente de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ======================= -->
+  <!-- Sección de ENCABEZADO  -->
+  <!-- ======================= -->
+  <header class="hero">
+    <!-- Navegación superior -->
+    <div class="navbar">
+    </div>
+
+    <!-- Texto del Hero principal -->
+    <div class="hero-content">
+      <h2>Estufas de calidad</h2>
+      <p>Diseño francés. Rendimiento superior. Estilo atemporal.</p>
+      <a href="#catalogo" class="btn">Ver catálogo</a>
+    </div>
+  </header>
+
+  <!-- ======================== -->
+  <!-- Sección: ¿Por qué OSLO? -->
+  <!-- ======================== -->
+  <section class="why-oslo">
+    <!-- Se puede agregar imagen -->
+
+    <!-- Texto de la derecha -->
+    <div class="why-text">
+      <h3>Por qué elegir OSLO</h3>
+      <ul>
+        <li><strong>Hechas en Francia</strong><br>Nuestras estufas están diseñadas y fabricadas en Francia.</li>
+        <li><strong>Calidad superior</strong><br>Ofrecen durabilidad, eficiencia y diseño.</li>
+        <li><strong>Estilo minimalista</strong><br>Diseños sobrios para espacios modernos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================== -->
+  <!-- Catálogo de Estufas     -->
+  <!-- ======================== -->
+  <section class="catalogo" id="catalogo">
+    <h3>Catálogo de Estufas</h3>
+    <div class="galeria">
+ <!-- CARROUSEL -->
+ <div class="mi-carousel-contenedor">
+  <div class="mi-carousel-flechas">
+    <button class="mi-carousel-flecha izquierda" onclick="cambiarSlide(-1)">←</button>
+    <button class="mi-carousel-flecha derecha" onclick="cambiarSlide(1)">→</button>
+  </div>
+  <div class="mi-carousel-vista">
+    <ul class="mi-carousel-lista">
+      <li id="slide-1" class="mi-carousel-item">
+        <img src="https://picsum.photos/id/1015/800/450" alt="Imagen 1" class="mi-carousel-imagen">
+        <div class="mi-carousel-texto">Estufa OVO. lorem50</div>
+      </li>
+      <li id="slide-2" class="mi-carousel-item">
+        <img src="https://picsum.photos/id/1016/800/450" alt="Imagen 2" class="mi-carousel-imagen">
+        <div class="mi-carousel-texto">Estufa 2</div>
+      </li>
+      <li id="slide-3" class="mi-carousel-item">
+        <img src="https://picsum.photos/id/1018/800/450" alt="Imagen 3" class="mi-carousel-imagen">
+        <div class="mi-carousel-texto">Estufa 3.</div>
+      </li>
+      <li id="slide-4" class="mi-carousel-item">
+        <img src="https://picsum.photos/id/1019/800/450" alt="Imagen 4" class="mi-carousel-imagen">
+        <div class="mi-carousel-texto">Estufa 4.</div>
+      </li>
+    </ul>
+  </div>
+</div>
+     
+    </div>
+  </section>
+      <script>
+        const carouselVista = document.querySelector('.mi-carousel-vista');
+        const carouselItems = document.querySelectorAll('.mi-carousel-item');
+        const cantidadItems = carouselItems.length;
+        let indiceActual = 0;
+      
+        function cambiarSlide(direccion) {
+          indiceActual = (indiceActual + direccion + cantidadItems) % cantidadItems;
+          const desplazamiento = carouselItems[0].offsetWidth * indiceActual;
+          carouselVista.scrollLeft = desplazamiento;
+        }
+      </script>
+      
+      <script>
+        const carouselVista = document.querySelector('.mi-carousel-vista');
+        const carouselItems = document.querySelectorAll('.mi-carousel-item');
+        const cantidadItems = carouselItems.length;
+        let indiceActual = 0;git remote add origin
+      
+        function cambiarSlide(direccion) {
+          indiceActual = (indiceActual + direccion + cantidadItems) % cantidadItems;
+          const desplazamiento = carouselItems[0].offsetWidth * indiceActual;
+          carouselVista.scrollLeft = desplazamiento;
+        }
+      </script>
+  <!-- ======================== -->
+  <!-- Formulario de contacto  -->
+  <!-- ======================== -->
+  <section class="contacto">
+    <h3>Contactanos</h3>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 OSLO - Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
